@@ -1,40 +1,64 @@
 #include <iostream>
-#include <stdlib.h> 
-
+#include <string>
+#include <ctime>
+#include <math.h>
+#include <fstream>
 using namespace std;
-
-// generating three random numbers and assigning the values to the parameter n1, n2, and n3
-void getRandnum(int &n1, int &n2, int &n3)   // arguments passed by reference
-{
-    n1=rand();            //assigning random value to n1
-    n2=rand();            //assigning random value to n2
-    n3=rand();            //assigning random value to n3
-}
-
-    // finding the minimum number and returning to the main function.
-int  findMin(int n1, int n2, int n3)
-{
-    if(n1<n2 && n1<n3)              //if n1 is minimum then returning n1
-    return n1;
-    if(n2<n3 && n2<n1)              //if n2 is minimum then returning n2
-    return n2;
-
-    return n3;                      //if n3 is minimum then returning n3
-}
-
-    // Printing out the results with the original numbers and the minimum value
-void printResult(int n1, int n2, int n3, int min)
-{
-    cout<<"Three random numbers are: "<<n1<<" "<<n2<<" "<<n3<<endl;
-    cout<<"min of these numbers is: "<<min<<endl;
-}
-
 
 int main()
 {
-    int n1,n2,n3,min;           //declaring variables
-    // calling functions
-    getRandnum(n1, n2, n3);
-    min = findMin(n1, n2, n3);
-    printResult(n1, n2, n3, min);
+        try
+        {
+                ifstream inFile;
+
+                inFile.open("employee.txt");
+                if (inFile)
+                {
+                        cout << "This file already exists.Would you like to overwrite (Y/N) ";
+                        char overwrite;
+                        cin >> overwrite;
+                        if (overwrite == 'Y' || overwrite == 'y')
+                        {
+                                inFile.close();
+                                ofstream outfile;
+                                outfile.open("employee.txt");
+                                cout << "Please enter all 5 employee id sex(M/F) Hourly wage Years with company one by one\n";
+
+                                for (int i = 0; i < 5; i++)
+                                {
+                                        string id;
+                                        int year;
+                                        int hourly;
+                                        char sex;
+                                        cin >> id >> sex >> hourly >> year;
+                                        outfile << id << " " << sex << " " << hourly << " " << year << "\n";
+                                }
+                                outfile.close();
+                        }
+                        else
+                                return 0;
+                }
+                else
+                {
+                        inFile.close();
+                        ofstream outfile;
+                        outfile.open("employee.txt");
+                        cout << "Please enter all 5 employee id sex(M/F) Hourly wage Years with company one by one\n";
+
+                        for (int i = 0; i < 5; i++)
+                        {
+                                string id;
+                                int year;
+                                int hourly;
+                                char sex;
+                                cin >> id >> sex >> hourly >> year;
+                                outfile << id << " " << sex << " " << hourly << " " << year;
+                        }
+                        outfile.close();
+                }
+        }
+        catch (std::ifstream::failure e)
+        {
+                std::cerr << "Exception opening/reading/closing file\n";
+        }
 }
