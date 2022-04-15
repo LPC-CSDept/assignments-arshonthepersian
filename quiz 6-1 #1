@@ -27,5 +27,12 @@ int main() {
         
         return 1;
 }
+
+void swapTwoValues(int *n1, int *n2) {
+        // swapping two integer numbers using pointers
+        int temp = *n1;
+        *n1 = *n2;
+        *n2 = temp;     
+}
         
         
