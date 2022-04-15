@@ -1,1 +1,16 @@
-hello
+#include <iostream>
+void swapTwoValues(int *n1, int *n2);
+void swapTwoValues(float *n1, float *n2);
+
+int main() {
+        
+        int a[5] = {1,2,3,4,5};
+        // swapping two integers
+        swapTwoValues(&a[2], &a[3]);
+        
+        // printing integer arrays
+        for(int i=0;i<5;i++){
+                printf("%d ",a[i]);
+        }
+        
+        printf("\n");
