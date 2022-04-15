@@ -34,5 +34,11 @@ void swapTwoValues(int *n1, int *n2) {
         *n1 = *n2;
         *n2 = temp;     
 }
+
+void swapTwoValues(float *n1, float *n2) {      
+        // swapping two float numbers using pointers
+        float temp = *n1;
+        *n1 = *n2;
+        *n2 = temp;
         
-        
+}
