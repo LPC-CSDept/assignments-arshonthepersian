@@ -1,1 +1,10 @@
-
+#include<iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+void gerRandnum(int &n1,int &n2,int &n3){
+        srand((unsigned int)time(NULL));
+        n1=rand()%100;
+        n2=rand()%100;
+        n3=rand()%100;
+}
