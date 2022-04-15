@@ -12,3 +12,11 @@ int findMin(int n1,int n2,int n3){
         if(n1<n2 && n1<n3)
                 return n1;
         else if(n2<n3)
+                return n2;
+        else
+                return n3;
+}
+void printResult(int n1,int n2,int n3,int min){
+        cout<<"Num1: "<<n1<<endl;
+        cout<<"Num2: "<<n2<<endl;
+        cout<<"Num3: "<<n3<<endl;
