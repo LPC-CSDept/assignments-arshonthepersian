@@ -1,1 +1,14 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
 
+double get_average(int marks[]){ 
+    int sum = 0, mn = 100; // sum to store sum of all marks and mn to store lowest marks
+    for(int i = 0; i < 6; i++){
+        sum += marks[i];
+        mn = min(mn, marks[i]);
+    }
+    double average = (double)(sum - mn) / 5; // return average of top 5 marks
+}
+
+char get_grade(double average){ // returns grade on the basis of average marks
