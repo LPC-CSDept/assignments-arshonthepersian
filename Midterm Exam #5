@@ -32,3 +32,7 @@ cin>>choice;
 switch(choice){
 
 case 1 :
+cout<<"The quotient of the two numbers is: " << divide();
+cout<<"\nType 1 to multiply, type 2 to divide and type 0 to end the program.";
+break;
+case 0 :
