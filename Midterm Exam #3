@@ -76,3 +76,23 @@ int main()
 
     {
 
+        // generate randum number
+
+        int num = getRdnum();
+
+        
+
+        if (isPrime(num))
+
+            // output to file
+
+            output << num << " ";
+
+    }
+
+    // close file
+
+    output.close();
+
+}
+
