@@ -1,1 +1,33 @@
+#include <iostream>
+
+#include <ctime>
+
+#include <random>
+
+#include <fstream>
+
+using namespace std;
+
+// define N as 10
+
+#define N 10
+
+// getRdnum function
+
+int getRdnum()
+
+{
+
+    // return random number between 1 and 50
+
+    return 1 + rand() % 50;
+
+}
+
+
+
+int isPrime(int n)
+
+{
+
 
