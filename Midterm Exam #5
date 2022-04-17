@@ -1,1 +1,15 @@
+#include <iostream>
 
+using namespace std;
+
+
+
+//definition of divide function
+int divide(){
+int num1,num2,quotient;
+cout<<"Enter two integers to divide: ";
+cin>>num1>>num2;
+  
+quotient = num1/num2;
+  
+return quotient;
