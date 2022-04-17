@@ -22,3 +22,13 @@ char get_grade(double average){ // returns grade on the basis of average marks
         return 'D';
     return 'F';
 }
+
+int main() {
+    string input_file = "student_input.dat"; // to read data
+    string output_file = "student_results.dat"; // to output result
+    ifstream fin(input_file); // read operator
+    ofstream fout(output_file); // write operator
+
+    string fname, lname, id;
+    int marks[6];
+    int grades[6] = {0};
