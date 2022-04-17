@@ -27,3 +27,8 @@ while(choice!=0){
 //Prompt user to choose an option
 cout<<"\nEnter a Number: ";
 cin>>choice;
+  
+//call the required method as per user choice
+switch(choice){
+
+case 1 :
