@@ -38,3 +38,15 @@ int main() {
         fin >> lname >> id;
         for(int i = 0; i < 6; i++)
             fin >> marks[i];
+
+        double average = get_average(marks);
+        char grade = get_grade(average);
+        fout << lname << "\t" << fname << "\t" << id << " " << average << " " << grade << endl;
+        grades[grade - 'A']++;
+    }
+    for(int i = 0; i < 6; i++){
+        if(grades[i] > 0){
+            fout << (char)(i + 'A') << " - " << grades[i] << endl;
+        }
+    }
+}
