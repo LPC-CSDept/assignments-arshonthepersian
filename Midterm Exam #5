@@ -21,3 +21,9 @@ int main()
 //declare and initialize a variable to store user's choice
 int choice = 1;
 cout<<" type 2 to divide two numbers and type 0 to end the program";
+  
+//while loop to keep executing the program until user enters 0
+while(choice!=0){
+//Prompt user to choose an option
+cout<<"\nEnter a Number: ";
+cin>>choice;
