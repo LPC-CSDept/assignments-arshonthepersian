@@ -30,4 +30,21 @@ int isPrime(int n)
 
 {
 
+    // loop from 2 to n/2
+
+    for (int i = 2; i < n / 2; i++)
+
+    {
+
+        // if factor found
+
+        if (n % i == 0)
+
+            return 0;
+
+    }
+
+    return 1;
+
+}
 
