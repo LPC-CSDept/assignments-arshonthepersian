@@ -13,3 +13,11 @@ cin>>num1>>num2;
 quotient = num1/num2;
   
 return quotient;
+}
+
+//man function definition
+int main()
+{
+//declare and initialize a variable to store user's choice
+int choice = 1;
+cout<<" type 2 to divide two numbers and type 0 to end the program";
