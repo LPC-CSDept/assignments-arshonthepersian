@@ -1,1 +1,27 @@
+#include<iostream>
 
+using namespace std;
+
+int main(){
+  
+   double weight;
+   cout<<"Enter a weight: ";
+   cin>>weight;
+  
+   if(weight > 10){
+       cout<<"Shiping charges :$"<<(4.80*weight)<<endl;
+       }
+   else if(weight > 6){
+       cout<<"Shiping charges :$"<<(3.70*weight)<<endl;
+       }
+   else if(weight > 2){
+       cout<<"Shiping charges :$"<<(2.20*weight)<<endl;
+       }
+   else if(weight >=0){
+       cout<<"Shiping charges :$"<<(1.10*weight)<<endl;
+       }
+   else{
+       cout<<"Weight can not be negative\n";
+       }
+   return 0;
+   }
