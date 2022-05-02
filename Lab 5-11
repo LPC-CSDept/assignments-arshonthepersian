@@ -1,1 +1,29 @@
+#include <iostream>
+using namespace std;
 
+bool checkPrime(int n)
+{
+for(int i = 2; i <= n/2; i++) {
+if (n%i == 0)
+{
+return false;
+}
+}
+return true;
+}
+int main() {
+int start,end;
+cout<<"Enter the start of range:";
+cin>>start;
+cout<<"Enter the end of range:";
+cin>>end;
+if(start==1)
+   start=2;
+for(int n = start; n < end; n++)
+{
+if(checkPrime(n))
+cout<<n<<" ";
+}
+cout<<endl;
+return 0;
+}
