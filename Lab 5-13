@@ -1,1 +1,52 @@
+#include <iostream>
 
+using namespace std;
+
+void lower(int row, int col)
+{
+int i, j;
+for (i = 0; i < row; i++)
+{
+for (j = 0; j < col; j++)
+{
+if (i < j)
+{
+//   
+}
+else
+cout << i<<","<<j<<"\n";
+}
+
+}
+}
+void upper(int row, int col)
+{
+int i, j;
+  
+for (i = 0; i < row; i++)
+{
+for (j = 0; j < col; j++)
+{
+if (i > j)
+{
+//
+}
+else
+cout << i<<","<<j <<"\n";
+}
+//cout << endl;
+}
+}
+int main()
+{
+  
+int row = 3, col = 3;
+  
+cout << "Lower triangular matrix index: \n";
+lower(row, col);
+  
+cout << "\nUpper triangular matrix index : \n";
+upper(row, col);
+
+return 0;
+}
