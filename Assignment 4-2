@@ -1,1 +1,26 @@
-
+#include<iostream>
+using namespace std;
+int main(){
+	//declaring required variables
+	int num1,num2,num3;
+	//taking them as input from user
+	cin>>num1>>num2>>num3;
+	//initlizing min and max with num1
+	int min=num1,max=num1,other;
+	//if num2 is greater than max then assigning it to max
+	if(num2>max)
+		max = num2;
+	//if num3 is greater than max then assigning it to max
+	if(num3>max)
+		max = num3;
+	//if num2 is less than min then assigning it to min
+	if(num2<min)
+		min = num2;
+	//if num3 is less than min then assigning it to min
+	if(num3<min)
+		min = num3;
+	//finding the number other than min and max
+	other = (num1+num2+num3) - (min+max);
+	//displaying the numbers in ascending order
+	cout<<min<<" "<<other<<" "<<max<<endl;
+}
