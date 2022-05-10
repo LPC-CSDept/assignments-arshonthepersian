@@ -1,1 +1,28 @@
-
+#include <iostream> // C++ Library
+using namespace std;
+int findmax(int numbers[], int, int); // function declaration
+int main()
+{ // variables declaration
+int numbers[50], numbers1[20], numbers2[20], max1, max2, n, i, a = 0;
+cout<<"Enter the the value of n: "; // Take an input of how many numbers
+cin>>n;
+cout<<"Enter the numbers: "<<endl;
+for(i = 0; i < n ; i++) // enter all the numbers
+{
+cin>>numbers[i];
+}
+cout<<"The given numbers is..."<<endl;
+cout<<" [ ";
+for(i = 0; i < n; i++) //Numbers devide into two slots and store in the slots
+{
+if(i < n/2) //numbers store in the first slot
+{
+numbers1[i] = numbers[i];
+cout<<numbers1[i]<<" , ";
+}
+else // numbers store in the second slot
+{
+numbers2[i] = numbers[i];
+cout<<numbers2[i]<<" , ";
+}
+}
