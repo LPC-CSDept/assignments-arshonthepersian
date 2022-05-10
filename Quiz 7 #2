@@ -12,3 +12,12 @@ int main()
 }
 void printtriangle(int numbers[][3], int size)
 {
+    for (int i=0;i<size;i++){
+        for (int j=0;j<size;j++){
+            if (j<=i){
+                std::cout << numbers[i][j] << ' ';
+            }
+        }
+        std::cout << "\n" ;
+    }
+}
