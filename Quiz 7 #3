@@ -26,3 +26,23 @@ numbers2[i] = numbers[i];
 cout<<numbers2[i]<<" , ";
 }
 }
+cout<<"] "<<endl;
+max1 = findmax(numbers1, a, n/2); //function calling for max number form slot 1
+cout<<"Max number from slot 1 : "<<max1<<"\t"; // print max number of slot 1
+max2 = findmax(numbers2, n/2, n); //function calling for max number form slot 2
+cout<<"Max number from slot 2 : "<<max2; // print max number of slot 2
+  
+return 0;
+}
+int findmax(int numbers[], int from, int to) // function definition for finding max number
+{
+int i, t = numbers[0];
+for (i = from; i < to; ++i)
+{
+if (t < numbers[i]) // first number compare with second number
+{
+t = numbers[i]; //if condition is true then interchange
+}
+}
+return t; // return the max number
+}
