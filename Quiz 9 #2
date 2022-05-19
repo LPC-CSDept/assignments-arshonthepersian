@@ -69,5 +69,24 @@ void insert()
 }
 void sort() // This function will insert the record according to department in respective file.
 {
+     emp e;
+     ofstream adm,sal,pro,it; //all files have been created for writing mode.
+     ifstream fin; // fin object belongs to the ifstream class, it is used to read the file contents only.
+     adm.open(Adminfile, ios::out | ios::binary | ios::app);
+     sal.open(Salesfile, ios::out | ios::binary | ios::app);
+     pro.open(Prodfile, ios::out | ios::binary | ios::app);
+     it.open(ITfile, ios::out | ios::binary | ios::app);
+     fin.open(empfile, ios::in | ios::binary);
+     while(fin.read((char *)&e,sizeof(e))) //reading the file contents till it reaches end of file.
+     {
+          if(strcmp(e.getdept(),"Admin")==0)
+          {
+               adm.write((char *)&e,sizeof(e));
+               cout<<"\n Record Inserted into ADMIN File!!!";
+          }
+          else if(strcmp(e.getdept(),"Sales")==0)
+          {
+               sal.write((char *)&e,sizeof(e));
+               cout<<"\n Record Inserted into SALES File!!!";
      
      
