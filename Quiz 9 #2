@@ -1,1 +1,33 @@
+#include<iostream>
+#include<string.h>
+#include<stdio.h>
+#include<cstdlib>
+#include<fstream>
 
+using namespace std;
+char empfile[30]   = "Employee.txt";
+char ITfile[20]    = "IT.txt";
+char Adminfile[25] = "Admin.txt";
+char Prodfile[30]  = "Production.txt";
+char Salesfile[30] = "Sales.txt";
+
+class emp
+{
+     int empid;
+     char name[30];
+     char address[60];
+     int age;
+     public:
+          char dept[15];
+     void get();
+     char *getdept()
+     {
+          return dept;
+     }
+};
+void emp::get()
+{
+     cout<<"\n Enter Employee Id     :  ";
+     cin>>empid;
+     cout<<"\n Enter Name            :  ";
+     
