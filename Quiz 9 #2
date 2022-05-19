@@ -30,4 +30,44 @@ void emp::get()
      cout<<"\n Enter Employee Id     :  ";
      cin>>empid;
      cout<<"\n Enter Name            :  ";
+     cin>>name;
+     cout<<"\n Enter Address         :  ";
+     cin>>address;
+     cout<<"\n Enter Department Name:(Admin/Sales/IT/Production)  :  ";
+     cin>>dept;
+     cout<<"\n Enter Age   :  ";
+     cin>>age;
+}
+void insert()
+{
+     emp e;
+     
+     ofstream fout; //ofstream is a class, fout is its object. It can be used only to write into the file.
+
+     //file is open in the binary, append and nocreate mode.
+     fout.open("Employee.txt",ios::in | ios::out | ios::binary | ios::app | ios::ate);
+     
+     if (fout.fail())
+     {
+          cout<<"\n Unable to Open the File!!!";
+          goto err;
+     }
+     e.get(); // accepting the details from the user.
+     fout.write((char *)&e,sizeof(e)); //writing into the file with fout object.
+     if(fout.tellp()%sizeof(e)==0)
+     {
+          cout<<"\n Record Inserted !!!"<<endl;
+     }
+     else
+     {
+          cout<<"\n Insertion Failed !!!";
+          goto err;
+     }
+     err:
+          fout.close();
+        
+}
+void sort() // This function will insert the record according to department in respective file.
+{
+     
      
