@@ -1,1 +1,27 @@
-
+#include<iostream>
+ using namespace std;
+ class Employee
+ {
+     private:
+         int empid;
+         char empname[20];
+         int bsalary;
+         int allowance;
+     public:
+         Employee()
+         {
+             bsalary = 1000;
+         }
+         void GetData();
+         void DispData();
+ };
+ void Employee::GetData()
+ {
+     cout<<"Enter the employee id: ";
+     cin>>empid;
+     cout<<"Enter the employee name: ";
+     cin>>empname;
+     cout<<"Enter the employee allowace: ";
+     cin>>allowance;
+ }
+ 
